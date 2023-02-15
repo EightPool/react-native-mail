@@ -132,14 +132,14 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       return;
     }
 
-    if (list.size() == 1) {
-      i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-      try {
-        reactContext.startActivity(i);
-      } catch (Exception ex) {
-        callback.invoke("error");
-      }
-    } else {
+    // if (list.size() == 1) {
+    //   i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    //   try {
+    //     reactContext.startActivity(i);
+    //   } catch (Exception ex) {
+    //     callback.invoke("error");
+    //   }
+    // } else {
       String chooserTitle = "Send Mail";
 
       if (options.hasKey("customChooserTitle") && !options.isNull("customChooserTitle")) {
@@ -154,6 +154,6 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       } catch (Exception ex) {
         callback.invoke("error");
       }
-    }
+    // }
   }
 }
