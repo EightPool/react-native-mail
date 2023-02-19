@@ -127,10 +127,10 @@ public class RNMailModule extends ReactContextBaseJavaModule {
     PackageManager manager = reactContext.getPackageManager();
     List<ResolveInfo> list = manager.queryIntentActivities(i, 0);
 
-    if (list == null || list.size() == 0) {
-      callback.invoke("not_available");
-      return;
-    }
+    // if (list == null || list.size() == 0) {
+    //  callback.invoke("not_available");
+    //  return;
+    // }
 
     // if (list.size() == 1) {
     //   i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
